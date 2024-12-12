@@ -34,13 +34,3 @@ SELECT
 	STRING_AGG(selected_character, '' ORDER BY id) AS decoded_message
 FROM decoded_letters
 ;
-
--- Binky's Table
--- SELECT *
--- FROM letters_a
--- ;
-
--- Blinky's Table
--- SELECT *
--- FROM letters_b
--- ;
