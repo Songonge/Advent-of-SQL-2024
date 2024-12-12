@@ -11,13 +11,10 @@ WITH production_trends AS (
     ) AS production_change_percentage
   FROM toy_production_new
 )
-SELECT production_date
+SELECT 
+	production_date
 FROM production_trends
 WHERE production_change_percentage IS NOT NULL
 ORDER BY production_change_percentage DESC
 LIMIT 1
 ;
-
--- SELECT *
--- FROM toy_production_new
--- ;
