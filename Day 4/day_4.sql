@@ -47,7 +47,3 @@ FROM tag_lengths
 ORDER BY length_added_tags DESC
 LIMIT 1
 ;
-
--- SELECT *
--- FROM toy_production
--- ;
