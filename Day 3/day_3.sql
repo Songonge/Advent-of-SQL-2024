@@ -20,8 +20,5 @@ SELECT
 FROM filtered_data
 GROUP BY food_item_id
 ORDER BY COUNT(*) DESC
-LIMIT 1;
-
--- SELECT *
--- FROM christmas_menus
--- ;
+LIMIT 1
+;
