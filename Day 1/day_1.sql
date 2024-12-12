@@ -1,15 +1,3 @@
--- SELECT *
--- FROM children
--- ;
--- SELECT *
--- FROM toy_catalogue
--- ;
--- SELECT *
--- FROM wish_lists
--- ;
--- \pset format unaligned
--- \pset fieldsep ','
-
 SELECT 
 	c.name,
     w.wishes ->> 'first_choice' AS primary_wish,
