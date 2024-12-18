@@ -1,6 +1,8 @@
 WITH timezone_info AS (
-    SELECT 'North Pole HQ' AS workshop_name, 'UTC' AS timezone
-	FROM Workshops
+    SELECT 
+	'North Pole HQ' AS workshop_name, 
+	'UTC' AS timezone
+    FROM Workshops
 ),
 workshop_hours AS (
     SELECT 
