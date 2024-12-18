@@ -13,7 +13,6 @@ workshop_hours AS (
     JOIN timezone_info tz ON w.workshop_name = tz.workshop_name
 )
 SELECT 
-    -- MIN(utc_start) AS meeting_start_utc
 	utc_start AS meeting_start_utc,
 	utc_end AS meeting_end_utc
 FROM workshop_hours
