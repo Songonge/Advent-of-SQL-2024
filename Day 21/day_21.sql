@@ -3,7 +3,11 @@ WITH total_amount AS (
 		EXTRACT(YEAR FROM sale_date) yr,
 		EXTRACT(QUARTER FROM sale_date) quarter,
 		SUM(amount) AS total_sales,
-		LAG(SUM(amount), 1) OVER (ORDER BY EXTRACT(YEAR FROM sale_date), EXTRACT(QUARTER FROM sale_date)) AS previous_quarter_amount
+		LAG(SUM(amount), 1) OVER (
+			ORDER BY 
+				EXTRACT(YEAR FROM sale_date), 
+				EXTRACT(QUARTER FROM sale_date)
+			) AS previous_quarter_amount
 	FROM sales
 	GROUP BY yr, quarter
 )
